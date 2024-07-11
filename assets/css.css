@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+  /* Font */
+  --Inter: 'Inter', sans-serif;
+  
+  /* Product */
+  --lime-300: #BEF264;
+  --lime-950: #1A2E05;
+
+  /* Grayscale */
+  --zinc-950: #09090B;
+  --zinc-900: #18181B;
+  --zinc-800: #27272A;
+  --zinc-700: #3F3F46;
+  --zinc-500: #71717A;
+  --zinc-400: #A1A1AA;
+  --zinc-100: #F4F4F5;
+  --zinc-50: #FAFAFA; 
+}
+
+html {
+  background-color: var(--zinc-950);
+  color: var(--zinc-50);
+}
+
+h3 {
+  size: 32px;
+  line-height: auto;
+  letter-spacing: -2%;
+  font-weight: bold;
+  font-family: var(--Inter);
+}
+
+h5 {
+  size: 24px;
+  line-height: auto;
+  letter-spacing: -2%;
+  font-family: var(--Inter);
+}
