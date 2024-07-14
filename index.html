@@ -6,9 +6,35 @@
     <title> Atividades </title>
     <script type="text/javascript" src="assets/js.js" defer=""></script>
     <link rel="stylesheet" href="assets/css.css">
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
+    <script>dayjs.locale('pt-br')</script>
   </head>
   <body>
-    <h3> Atividades </h3>
-    <section></section>
+    
+    <form onsubmit="saveActivity(event)">
+      <div>
+        <input type="text" placeholder="Qual a Atividade?"  name="activity" required>
+      </div>
+  
+      <div>
+        <select name="day">
+          <option value="2024-02-01"> 01 de fevereiro </option>
+        </select>
+      </div>
+  
+      <div>
+        <select name="hour">
+          <option value="10:30"> 10:30 </option>
+        </select>
+      </div>
+      <button> Salvar atividade </button>
+    </form>
+    
+    <main>
+      <h3> Atividades </h3>
+      <section></section>
+    </main>
+    
   </body>
 </html>
