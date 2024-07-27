@@ -19,22 +19,177 @@
   --zinc-50: #FAFAFA; 
 }
 
-html {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, input, select, button, option {
   background-color: var(--zinc-950);
   color: var(--zinc-50);
+  font-family: var(--Inter);
+
+  line-height: 120%;
+  letter-spacing: -0.02em;
 }
 
+#app {
+  padding: 40px 20px;
+  max-width: 320px;
+  margin: auto;
+}
+
+/* HEADER */
+#place {
+  margin-bottom: 32px;
+  display: flex;
+  padding: 22px 16px;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+}
+
+.card-bg {
+  background: var(--zinc-900);
+  box-shadow: 
+    0px 8px 8px rgba(0, 0, 0, 0.1), 
+    0px 4px 4px rgba(0, 0, 0, 0.1), 
+    0px 2px 2px rgba(0, 0, 0, 0.1), 
+    0px 0px 0px 1px rgba(0, 0, 0, 0.1), 
+    inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03), 
+    inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+}
+
+/* FORM */
+input, select {
+  all: unset;
+}
+
+input, select, button {
+  width: 100%;
+}
+
+button {
+  margin-top: 12px;
+  border: none;
+  padding: 12px 20px;
+  background-color: var(--lime-300);
+  border-radius: 8px;
+  
+  font-weight: 500;
+  color: var(--lime-950);
+  letter-spacing: -0.02em;
+  cursor: pointer;
+}
+
+.fields {
+  display: grid;
+  gap: 8px;
+}
+
+.field-wrapper {
+  padding: 18px;
+  background-color: var(--zinc-950);
+  border: 1px solid var(--zinc-800);
+  border-radius: 12px;
+  
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.field-wrapper:focus-within {
+  outline: 2px solid var(--lime-300);
+}
+
+
+/* MAIN */
 h3 {
-  size: 32px;
-  line-height: auto;
-  letter-spacing: -2%;
-  font-weight: bold;
-  font-family: var(--Inter);
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 32px;
 }
 
-h5 {
-  size: 24px;
-  line-height: auto;
-  letter-spacing: -2%;
-  font-family: var(--Inter);
+section {
+  display: grid;
+  gap: 10px;
+}
+
+section input[type="checkbox"] {
+  position: absolute;
+  inset: 0;
+}
+
+section .card-bg {
+  position: relative;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+section .card-bg:has(:checked) .active,
+section .card-bg .inactive {
+  display: block;
+}
+
+section .card-bg:has(:checked) .inactive,
+section .card-bg .active {
+  display: none;
+}
+
+section .card-bg > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+time {
+  font-size: 14px;
+  color: #A1A1AA;
+  text-align: right;
+}
+
+time.full {
+  display: none;
+}
+
+@media (width > 1024px) {
+  #app {
+    display: flex;
+    max-width: 968px;
+    gap: 32px;
+  }
+
+  main {
+    margin-top: 0;
+    flex: 1;
+  }
+
+  h3 {
+    text-align: left;
+  }
+
+  time.full {
+    display: block;
+  }
+
+  time.short {
+    display: none;
+  }
+}
+
+section .card-bg {
+  animation: appear 1s;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
 }
