@@ -114,6 +114,11 @@ h3 {
   margin-top: 32px;
 }
 
+p {
+  text-align: center;
+  color: var(--zinc-500)
+}
+
 section {
   display: grid;
   gap: 10px;
@@ -174,6 +179,10 @@ time.full {
   h3 {
     text-align: left;
     margin-top: 8px;
+  }
+
+  p {
+    text-align: left;
   }
 
   time.full {
