@@ -17,21 +17,7 @@ function formatter(date) {
 // Objects
 // Array of activity objects with name, date, and check status
 let activities = [
-  {
-    name: "Almoço",
-    date: new Date("2024-07-08 10:00"),
-    check: true
-  },
-  {
-    name: "Academia em Grupo",
-    date: new Date("2024-07-09 12:00"),
-    check: false
-  },
-  {
-    name: "Gaming Session",
-    date: new Date("2024-07-09 16:00"),
-    check: false
-  }
+  
 ]
 
 // Functions
