@@ -64,8 +64,21 @@ function createActivity(activity) {
   `
 }   
 
+// Function to sort activities by date
+function sortActivitiesByDate() {
+  activities.sort((a, b) => {
+    // Convert date strings to Day.js objects
+    const dateA = dayjs(a.date, "YYYY-MM-DD HH:mm");
+    const dateB = dayjs(b.date, "YYYY-MM-DD HH:mm");
+    return dateA - dateB;
+  });
+}
+
 // Function to update the activities in the HTML section
 function updateActivities() {
+  // Sort activities by date
+  sortActivitiesByDate();
+  
   // Select the first <section> element in the document
   const section = document.querySelector('section')
   
